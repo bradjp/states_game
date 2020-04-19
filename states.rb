@@ -14,10 +14,12 @@ def states_quiz
 
   while states.length > 0 do
     puts 'Guess a state!'
-    guess = gets.chomp
+    guess = gets.chomp.downcase.capitalize
     if states.include?(guess)
       states.delete(guess)
       puts "You have guessed #{50-states.length} states"
+    else
+      puts "That's not a state."
     end
   end
   puts 'You win!'
