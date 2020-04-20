@@ -18,12 +18,15 @@ def states_quiz
     if states.include?(guess)
       states.delete(guess)
       puts "You have guessed #{50-states.length} states"
+    elsif guess == 'Quit'
+      puts 'Goodbye!'
+      break
     else
       puts "That's not a state."
     end
   end
-  puts 'You win!'
+  puts 'You win!' unless states.length > 0
 
 end
 
-states_quiz()
+states_quiz
