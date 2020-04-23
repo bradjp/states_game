@@ -12,11 +12,6 @@ def states_quiz
 
   correct_guesses = []
 
-  def show_guesses
-    puts 'Correct guesses'
-    puts 'Ohio'
-  end
-
   while states.length > 0 do
     puts 'Guess a state!'
     guess = gets.chomp.downcase.capitalize
